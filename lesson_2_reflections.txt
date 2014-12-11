@@ -1,0 +1,10 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	When initializing a git repository, the system creates a hidden file (.git)
+	that initializes my repository. Without this, I won't be able to proceed.
+
+
+Lesson 2 commands learned:
+		git init
+		git status
+		git add (file)
