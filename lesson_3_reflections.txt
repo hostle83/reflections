@@ -5,3 +5,9 @@ and are remote or are working on the same project from their individual machines
 Q: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 A: Because in cases the project is collaborative: if GitHub were to automatically update my local repository it could potentially get
 really messy and I would loose track of what my own work.
+
+Q: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+A: Forks are clones of remotes on GitHub. Forking means cloning a repository from another GitHub user. 
+Clones can either be on within GitHub (forks), from GitHub to a local machine through GitBash, from
+a local machine to GitHub via the push method, or they can happen locally. Branches are versions of the 
+same code that have been grouped under a given name. 
