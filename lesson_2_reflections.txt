@@ -4,7 +4,74 @@ What happens when you initialize a repository? Why do you need to do it?
 	that initializes my repository. Without this, I won't be able to proceed.
 
 
+How can you use the staging area to make sure you have one commit per logical change?
+
+	Add to the staging area and commit one piece at a time
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	Helpful if I want to experiment 
+
+
+When does detached head message occur?
+	When you check out a commit (not a branch!) that is not part of an already existing branch.
+	'HEAD' just means "current commit", so it points to the current commit currently checked out
+	If you worked on a new commit node and then switched back to the master branch (or any other branch for that matter), 
+		the progress on that commit node is lost, as if it had never existed. To save any work on that commit node,
+	use 'git checkout -b new_branch_name', which runs two commands:
+		1) git branch new_branch_name (creates a new branch with the given name)
+		2) git checkout new_branch_name (checksout the new branch)
+
+
+How do the diagrams help you visualize the branch structure?
+
+	Diagrams help understand the workflow of a project in that they contribute to an overview of 
+	branches and commit nodes
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	The result of merging two branches is that commits from branch1 are now part of branch2 or vice versa.
+	Git also combines the code for both branches so that changes from branch1 are now reflected in changes from branch2 or vice versa.
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	Automatic merging can be useful if it is clear what changes should be included from both or either branch.
+	If the it is unclear what changes should be commit and thus merged, it is useful to merge manually, since
+	automatic merging could break the code in that situation.
+	
+
 Lesson 2 commands learned:
-		git init
+		git init (initializes git for the current working directory)
 		git status
-		git add (file)
+		git add (file) (adds file to the staging area and prepares it for commit)
+		git checkout master (checks out master branch)
+		git commit (commits to the repository)
+		git branch [no arguments] - shows current branches
+
+		git diff (without arguments) - compares the working directory with the staging area
+		git diff --staged - compares the staging area with commit1 (or the most recent commit)
+		git diff commit1 commit2 - compares commit1 to commit2
+
+		git checkout -b new_branch_name: creates a new branch with the designated name and checks it out at the same time
+
+
+		*********************	****************	**************
+		* Working Directory *   * Staging Area *	* Repository *
+		*-------------------*   *--------------*    *------------*
+		*   File 1          *   *    File 1	   *	* ********** *
+		*                   *   * 	 		   *	*  Commit 1  *
+		*   File 2          *   *	 File 2	   *	* ********** *
+		*                   *   *			   *	*  Commit 2  *
+		*********************   ****************	**************
+
+		git log --graph --oneline [branch1] [branch2]
+				->  compares branch 1 and branch 2 and outputs the commits that were created in each
+
+		git merge [branch1] [branch2]: merges two branches
+
+		git show [commit id] - compares the commit [commit id] to it's parent (without having to know what the parent was)
+
+		git branch -d [branch_name] - deletes the branch with the given branch name (deletes only the label, not the actual commits in the branch)
