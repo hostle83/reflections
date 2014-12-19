@@ -11,3 +11,13 @@ A: Forks are clones of remotes on GitHub. Forking means cloning a repository fro
 Clones can either be on within GitHub (forks), from GitHub to a local machine through GitBash, from
 a local machine to GitHub via the push method, or they can happen locally. Branches are versions of the 
 same code that have been grouped under a given name. 
+
+Q: What is the benefit of having a copy of the last known state of the remote stored locally?
+A: Keeps things organized! Once I work on my repository locally, keeping a copy of the last known
+state of the remote will ensure that the system knows what to update next time I fetch/pull/push
+
+Q: How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+A: Easier - GitHub needs a learning curve; takes time and effort, which not everyone collaborating on 
+projects might be willing to invest. Harder - Git and GitHub do a nice job of organizing and visualizing 
+the progress of a project, leave room for error and experimentation and optimize workflow. It would be 
+much harder to keep track of a complex, ongoing project with many alterations or versions without Git.
