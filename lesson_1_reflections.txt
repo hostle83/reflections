@@ -1,3 +1,50 @@
+Commands learned:
+
+	- FC (File Compare, in Windows Command Shell):  FC java.old java.new
+	- diff -u (in GitBash): diff -u file.old file.new:  Compares file old with file new and shows changes
+
+	- git log
+	- git diff (commit id1) (commit id2)
+	- git --version: determine your current git version 
+	- git clone (URL of repository): copies a repository into the pwd
+	- git checkout (commit id): 'checks out' the program as is based on the commit id entered
+
+	Lesson 2:
+
+	- ls -a: shows all files in a folder, including hidden files (starting with a '.')
+	- git init: initializes/creates new (empty) git repository in the pwd
+	- git status: shows which files have changed since the last commit (if run right after git init, all files will shown as changed)
+	- git add: adds files to the staging area before the actual commit
+
+	Choosing what changes to commit (example):
+
+	******************				 ******************				******************	
+	* PWD            *				 * Staging        *				* Repository     *
+	*                *	add to 		 * Area           *				*                *
+	*				 *	staging area *                *	 Commit		*                *
+	*	cake.txt	 *	------->	 *	 cake.txt     *	 ------->	*	cake.txt	 *
+	*	frosting.txt *	------->	 *	 frosting.txt *	 			*	frosting.txt *
+	*	chili.txt	 *				 *	              *				*				 *
+	*				 *				 *                *				*                *
+	*				 *				 *                *				*                *
+	******************				 ******************				******************
+
+
+
+
+
+
+Definitions:
+
+	- Commit: Snapshot of every file of your repository at the time you choose to make the commit
+	- Repository: Multiple files that are tracked together and run together for the program to function properly
+	- HEAD: Current commit
+
+
+
+
+
+
 How did viewing a diff between two versions of a file help you see the bug that was introduced?
 
 	Viewing the diff helped me because it showed a succinct version of the differences between
@@ -51,20 +98,14 @@ Now that you have your workspace set up, what do you want to try using Git for?
 	I want to understand how to use it to store my versions of code on Github
 
 
-What happens when you initialize a repository? Why do you need to do it?
 
-	When initializing a git repository, the system creates a hidden file (.git)
-	that initializes my repository. Without this, I won't be able to proceed.
 
 Git commands learned:
 	Lesson 1:
-		diff (file1 file2)
+		diff (commit1 commit2)
 		git log
 		git clone
 		git checkout
 		 
 
-	Lesson 2:
-		git init
-		git status
-		git add (file)
+	

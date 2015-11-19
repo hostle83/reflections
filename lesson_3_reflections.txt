@@ -21,3 +21,10 @@ A: Easier - GitHub needs a learning curve; takes time and effort, which not ever
 projects might be willing to invest. Harder - Git and GitHub do a nice job of organizing and visualizing 
 the progress of a project, leave room for error and experimentation and optimize workflow. It would be 
 much harder to keep track of a complex, ongoing project with many alterations or versions without Git.
+
+
+Commands learned in lesson 3:
+
+	- git remote add [remote-name] [url] --- adds a new remote with the given name and clones the repository of the given URL
+	- git pull [remote-name] [branch-name] --- pulls the branch with given branch name into the remote with given remote name
+	
