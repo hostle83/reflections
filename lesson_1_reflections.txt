@@ -1,10 +1,12 @@
-Commands learned:
+Commands learned (see also: https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf):
 
 	- FC (File Compare, in Windows Command Shell):  FC java.old java.new
 	- diff -u (in GitBash): diff -u file.old file.new:  Compares file old with file new and shows changes
 
 	- git log
+	- git diff: shows all the changes to files made in the pwd vs. the staging area
 	- git diff (commit id1) (commit id2)
+	- git diff --staged: compare staging area to most recent commit
 	- git --version: determine your current git version 
 	- git clone (URL of repository): copies a repository into the pwd
 	- git checkout (commit id): 'checks out' the program as is based on the commit id entered
@@ -29,9 +31,30 @@ Commands learned:
 	*				 *				 *                *				*                *
 	******************				 ******************				******************
 
+	- git add (file name): adds speficified file to the staging area
+	- git commit: commits all files currently in the staging area, opens editor of choice to enter commit message; best practice: http://udacity.github.io/git-styleguide/
+	- git reset HEAD (file name (of file in staging area)): removes file from staging area
+	- git reset --hard: discards any changes in the pwd and the staging area (NON-REVERSEABLE!)
+	- git branch (no args): shows current branches
+	- git branch (new branch name): creates new branch
+	- git log --graph --oneline (branch1) (branch2) (etc.): gives visual representation of structure (of branches specified as args)
+	- git checkout -b [new branch name]: Creates a new branch for the current commit and checks it out at the same time
+	- git show [commit ID]: Runs 'git diff' on the provided ID against the commit's parent (--> no need to know what the parent actually is,
+		useful after merging branches)
+	- git branch -d coins: delets the branch named 'coins' --> doesn't delete commits, only the label
+	- git remote: lists all remotes that have been created
 
 
+How to:
 
+	- merge two branches/merge branch a into branch b:
+		1. Check the current branch to be sure branch b (the master branch) is selected (by running 'git branch')
+		2. Run 'git merge [a] [b]' to create a merged version of the two branches. Name the branch first that will be the master branch
+		3. Enter commit message for merge commit if wanted
+
+	- push a local Git repository to GitHub:
+		1. Create an empty repository on GitHub
+		2. 
 
 
 Definitions:
@@ -39,6 +62,7 @@ Definitions:
 	- Commit: Snapshot of every file of your repository at the time you choose to make the commit
 	- Repository: Multiple files that are tracked together and run together for the program to function properly
 	- HEAD: Current commit
+
 
 
 
